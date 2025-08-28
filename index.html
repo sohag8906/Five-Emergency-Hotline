@@ -27,7 +27,7 @@
 
     <div class="flex items-center gap-4 md:gap-8">
       <div class="flex items-center gap-2 bg-[#41ff6b1a] px-4 py-2 rounded-full">
-        <p class="font-bold">0</p>
+        <p id="heart-count" class="font-bold">0</p>
         <img src="assets/heart.png" class="w-6 h-6 md:w-8 md:h-8" alt="">
       </div>
 
@@ -38,7 +38,7 @@
 
       
       <button class="bg-[#00a63e] text-white px-5 py-2 rounded-full flex items-center gap-2">
-        <span>2</span> Copy
+        <span id="copy-click">0</span> Copy
       </button>
 
     </div>
@@ -64,13 +64,13 @@
   <div class="flex flex-col lg:flex-row gap-6">
     
     <!-- Left side (Cards grid) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-1">
 
       <!-- 1. জাতীয় জরুরি সেবা -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px] rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img  src="assets/heart - Copy.png"  class="card-count w-6 h-6 mt-1" alt="  ">
         </div>
         <h1 class="text-xl font-bold my-2">জাতীয় জরুরি সেবা</h1>
         <p class="text-gray-500">National Emergency</p>
@@ -87,10 +87,10 @@
       </div>
 
       <!-- 2. পুলিশ -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px]  rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/police.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">পুলিশ</h1>
         <p class="text-gray-500">Police</p>
@@ -107,10 +107,10 @@
       </div>
 
       <!-- 3. ফায়ার সার্ভিস -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px]  rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/fire-service.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">ফায়ার সার্ভিস</h1>
         <p class="text-gray-500">Fire Service</p>
@@ -127,10 +127,10 @@
       </div>
 
       <!-- 4. অ্যাম্বুলেন্স -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px] rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/ambulance.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">অ্যাম্বুলেন্স</h1>
         <p class="text-gray-500">Ambulance</p>
@@ -147,10 +147,10 @@
       </div>
 
       <!-- 5. নারী ও শিশু সহায়তা -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px] rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">নারী ও শিশু সহায়তা</h1>
         <p class="text-gray-500">Women & Child Helpline</p>
@@ -167,10 +167,10 @@
       </div>
 
       <!-- 6. দুদক -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px] rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">দুদক</h1>
         <p class="text-gray-500">Anti-Corruption</p>
@@ -187,10 +187,11 @@
       </div>
 
       <!-- 7. বিদ্যুৎ বিভ্রাট -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px]  rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class=" card-count w-6 h-6 mt-1" alt="">
+          
         </div>
         <h1 class="text-xl font-bold my-2">বিদ্যুৎ বিভ্রাট</h1>
         <p class="text-gray-500">Electricity Outage</p>
@@ -207,10 +208,10 @@
       </div>
 
       <!-- 8. ব্র্যাক -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px]  rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class="card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">ব্র্যাক</h1>
         <p class="text-gray-500">Brac</p>
@@ -227,27 +228,26 @@
       </div>
 
       <!-- 9. বাংলাদেশ রেলওয়ে -->
-      <div class="w-full h-[310px] border-2 border-gray-700 rounded-xl p-6 bg-white shadow">
+      <div class="w-full h-[310px] rounded-xl p-6 bg-white shadow">
         <div class="flex justify-between">
           <img src="assets/emergency.png" class="w-8 h-8" alt="">
-          <img src="assets/heart - Copy.png" class="w-6 h-6 mt-1" alt="">
+          <img src="assets/heart - Copy.png" class="card-count w-6 h-6 mt-1" alt="">
         </div>
         <h1 class="text-xl font-bold my-2">বাংলাদেশ রেলওয়ে</h1>
         <p class="text-gray-500">Bangladesh Railway</p>
         <h1 class="text-2xl font-bold my-5">163</h1>
         <p class="text-sm bg-gray-200 my-2 rounded-full w-[90px] h-[28px] flex items-center justify-center">পরিবহন</p>
         <div class="flex gap-3 mt-6">
-          <button class="flex items-center justify-center gap-2 w-1/2 h-[40px] border-2 border-gray-500 text-gray-800 rounded-xl">
-            <img src="assets/copy.png" alt="copy" class="w-5 h-5">Copy
+          <button class="flex items-center justify-center gap-2 w-1/2 h-[40px] border-2 border-gray-700  text-gray-500 rounded-xl">
+            <img src="assets/copy.png" alt="" class="w-5 h-5">Copy
           </button>
           <button class="flex items-center justify-center gap-2 w-1/2 h-[40px] bg-[#00a63e] text-white rounded-xl">
-            <img src="assets/Vector.png" alt="call" class="w-5 h-5">Call
+            <img src="assets/Vector.png" alt="" class="w-5 h-5">Call
           </button>
         </div>
       </div>
 
     </div>
-
     <!-- Right side (Call History) -->
     <div class=" w-full lg:w-[350px] bg-white rounded-xl shadow h-auto p-4">
       <div class="flex justify-between items-center mb-4">
@@ -259,7 +259,7 @@
       </div>
       <div class="text-gray-500 text-sm">
        
-        No calls yet.
+        call
 
       </div>
     </div>
