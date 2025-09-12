@@ -106,3 +106,10 @@ document.querySelector("a").addEventListener("click", function (e) {
   e.preventDefault(); // লিঙ্ক আর নতুন পেজে যাবে না
   console.log("Link clicked, but default action stopped!");
 });
+
+
+
+
+
+
+
