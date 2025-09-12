@@ -1,3 +1,6 @@
+let coins = 100; 
+const coinDisplay = document.getElementById('coin-count');
+coinDisplay.textContent = coins;
 
 let heartCount = 0;
 const heartDisplay = document.getElementById('heart-count');
@@ -10,19 +13,21 @@ cardButtons.forEach(btn => {
     });
 });
 
-
 let copyCount = 0;
 const copyDisplay = document.getElementById('copy-click');
 const copyButtons = document.querySelectorAll('button');
+const callLog = document.getElementById("call-log");
+
+// শুরুতেই টাইটেল থাকবে
+callLog.innerHTML = "<h3 class='font-bold mb-2'>📞 Call History</h3>";
 
 copyButtons.forEach(btn => {
-    
+    // Copy button
     if (btn.querySelector(".copy-count")) {
         btn.addEventListener('click', () => {
             copyCount++;
             copyDisplay.textContent = copyCount;
 
-            
             const card = btn.closest('.w-full');
             let hotlineNumber = card.querySelector("h1.text-2xl");
             if (!hotlineNumber) {
@@ -33,7 +38,7 @@ copyButtons.forEach(btn => {
         });
     }
 
-    
+    // Call button
     if (btn.querySelector(".call-now")) {
         btn.addEventListener('click', () => {
             if (coins < 20) {
@@ -45,7 +50,11 @@ copyButtons.forEach(btn => {
             coinDisplay.textContent = coins;
 
             const card = btn.closest(".w-full");
-            const hotlineName = card.querySelector("h1.text-xl").textContent;
+            let hotlineName = card.querySelector("h1.text-xl");
+            if (!hotlineName) {
+                hotlineName = card.querySelector("h1.text-2xl");
+            }
+            hotlineName = hotlineName.textContent;
 
             let hotlineNumber = card.querySelector("h1.text-2xl");
             if (!hotlineNumber) {
@@ -56,10 +65,9 @@ copyButtons.forEach(btn => {
             const now = new Date();
             const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
-            
             alert(`Calling ${hotlineName}\nNumber: ${hotlineNumber}\nTime: ${time}`);
 
-            
+            // কল হিস্টোরি আইটেম বানানো
             const div = document.createElement("div");
             div.className = "flex justify-between items-center py-2 border-b";
             div.innerHTML = `
@@ -69,18 +77,12 @@ copyButtons.forEach(btn => {
                 </div>
                 <div class="text-right text-black">${time}</div>
             `;
-            callLog.prepend(div);
+            callLog.appendChild(div); // নতুন এন্ট্রি শেষে যুক্ত হবে
         });
     }
 });
 
-let coins = 100;
-const coinDisplay = document.getElementById('coin-count');
-coinDisplay.textContent = coins;
-
-
+// Clear history
 document.getElementById("clear-history").addEventListener("click", () => {
-    callLog.innerHTML = "<h3>📞 Call History</h3>";
+    callLog.innerHTML = "<h3 class='font-bold mb-2'>📞 Call History</h3>";
 });
-
-
